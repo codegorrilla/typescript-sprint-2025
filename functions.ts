@@ -33,6 +33,22 @@ const addition = (x: number, y: number): number =>{
 
 console.log(addition(3, 5));
 
+//returing something to the DOM
+const colors = ['red', 'orange', 'yellow'];
+
+colors.map(color =>{
+    return color.toUpperCase();
+});
+
+//a void function
+const printTwice = (msg: string) : void=>{
+    console.log(msg);
+}
+
+//the never type
+function makeError(msg: string): never{
+    throw new Error(msg);
+}
 
 //avoid the clash between variable names used here with the typescript global typings
 //export{all}
