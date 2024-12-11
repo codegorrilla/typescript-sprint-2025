@@ -1,7 +1,7 @@
 //type annotations
 let movieTitle: string = 'Mission impossible';
 
-//movieTitle = 'Arrival'; re-assinging values to scoped variables are not possible in TS
+movieTitle = 'Arrival'; //re-assigning values to scoped variables are not possible in TS
 
 //movieTitle = 10 - this is wrong
 
