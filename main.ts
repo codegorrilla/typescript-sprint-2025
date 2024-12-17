@@ -1,2 +1,1 @@
-import * as all from './functions'
-
+import * as all from './functions';

@@ -2,7 +2,7 @@
 
 const activeUsers: string[] = [];
 
-activeUsers.push("Steven");
+activeUsers.push('Steven');
 
 console.log(activeUsers);
 
@@ -12,21 +12,24 @@ const bools: Array<boolean> = []; //const bools: boolean[] = []
 //array with a custom type
 
 type points = {
-    x: number;
-    y: number;
-}
+  x: number;
+  y: number;
+};
 
 const myCoords: points[] = [];
 
-console.log(myCoords.push({x: 20, y: 30}));
-
+console.log(myCoords.push({ x: 20, y: 30 }));
 
 //multidimensional arrays
-const multiArr: string[][] = [["x", "o", "x"], ["o", "x", "x"], ["x", "o", "x"]];
+const multiArr: string[][] = [
+  ['x', 'o', 'x'],
+  ['o', 'x', 'x'],
+  ['x', 'o', 'x'],
+];
 
 //mixed array
 const mixedArr: any[] = [];
 
-const mix1 = mixedArr.push("Hello", "Sanjib", 1);
+const mix1 = mixedArr.push('Hello', 'Sanjib', 1);
 
 console.log(mixedArr);

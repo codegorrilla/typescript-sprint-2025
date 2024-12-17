@@ -16,4 +16,3 @@ gameOver = false;
 let nothing: null = null;
 
 let foo: undefined = undefined;
-
