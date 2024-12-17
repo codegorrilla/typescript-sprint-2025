@@ -30,13 +30,13 @@ type Cat = {
   color: string;
 };
 
-type Dog = {
+type Dogg = {
   name: string;
   breed: string;
 };
 
 //intersection
-type CatDog = Cat & Dog;
+type CatDog = Cat & Dogg;
 
 const myPet = (profile: CatDog): void => {
   console.log(
@@ -65,19 +65,19 @@ let singer = { first: 'Mick', last: 'Jagger', age: 32 };
 printName(singer);
 
 //optional properties
-type point = {
+type pointz = {
   x: number;
   y: number;
   z?: number; //optional
 };
 
-const myCoordinate: point = { x: 30, y: 40, z: 60 };
+const myCoordinate: pointz = { x: 30, y: 40, z: 60 };
 
-const coordinate = (point: point): void => {
+const coordinate = (point: pointz): void => {
   console.log(`The co-ordinates are ${point.x}degree, ${point.y}degree`);
 };
 
-const coord2 = (point: point): void => {
+const coord2 = (point: pointz): void => {
   console.log(
     `The co-ordinates are ${point.x}degree, ${point.y}degree and ${point.z}degree`
   );
