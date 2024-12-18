@@ -31,7 +31,7 @@ const addition = (x: number, y: number): number => {
 
 console.log(addition(3, 5));
 
-//returing something to the DOM
+//returning something to the DOM
 const colors = ['red', 'orange', 'yellow'];
 
 colors.map((color) => {
