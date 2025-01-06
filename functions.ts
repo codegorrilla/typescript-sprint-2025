@@ -34,7 +34,7 @@ console.log(addition(3, 5));
 //returning something to the DOM
 const colors = ['red', 'orange', 'yellow'];
 
-colors.map((color) => {
+colors.map((color: string): string => {
   return color.toUpperCase();
 });
 
