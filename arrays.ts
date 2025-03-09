@@ -2,7 +2,7 @@
 
 const activeUsers: string[] = [];
 
-activeUsers.push('Steven');
+activeUsers.push('Steven', 'Sanjib', 'John');
 
 console.log(activeUsers);
 
@@ -32,4 +32,4 @@ const mixedArr: any[] = [];
 
 const mix1 = mixedArr.push('Hello', 'Sanjib', 1);
 
-console.log(mixedArr);
+console.log(mix1);

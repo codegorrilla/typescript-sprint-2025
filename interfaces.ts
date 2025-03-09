@@ -22,7 +22,7 @@ const thomas: person = {
   last: 'Hardy',
   id: 123,
   sayHi: () => {
-    return `Hello! ${name}`;
+    return `Hello! ${thomas.first} ${thomas.last}`;
   },
 };
 

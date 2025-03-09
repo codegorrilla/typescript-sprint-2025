@@ -54,11 +54,11 @@ const lou: game = {
   type: 'Adventure',
   studio: { developer: 'Naughty Dog', market: 'Sony' },
   multiplayer: false,
-  year: 2012,
   profit: 30000,
+  year: 2012
 };
 
-let gameProfit = calcProfit(lou);
+const gameProfit = calcProfit(lou);
 let gameDetail = detail(lou);
 
 document.documentElement.innerHTML = gameProfit + gameDetail;

@@ -51,4 +51,4 @@ type DayOfWeek =
   | 'Saturday'
   | 'Sunday';
 
-let today: DayOfWeek = 'Friday';
+let today: DayOfWeek = 'Sunday';

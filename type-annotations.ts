@@ -15,4 +15,6 @@ gameOver = false;
 
 let nothing: null = null;
 
-let foo: undefined = undefined;
+let foo: undefined;
+
+foo = undefined;
