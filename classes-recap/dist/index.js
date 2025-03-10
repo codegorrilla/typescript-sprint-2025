@@ -1,87 +1,56 @@
-'use strict';
-
-class Player {
-  static desciption = 'Player in our Game'; // static fields => this prop. will not exist on every instance of this class
-  #score = 0; //private class fields => it's only usable inside the class
-  numLives = 10; //class fields
-  #secret() {
-    //private method
-    console.log('Secret');
-  }
-  constructor(first, last) {
-    //console.log('IN constructor');
-    this.first = first;
-    this.last = last;
-    this.#secret(); // calling private method
-  }
-  get score() {
-    return this.#score;
-  }
-  //setters
-  set score(newScore) {
-    if (newScore < 0) {
-      throw new Error('Score must be positive!');
+"use strict";
+// class Player{
+//     public readonly first: string;
+//     public readonly last: string;
+class Jacket {
+    color;
+    brand;
+    constructor(color, brand) {
+        this.color = color;
+        this.brand = brand;
     }
-
-    this.#score = newScore;
-  }
-  static randomPlayer() {
-    return new Player('Andy', 'Samburg');
-  }
-  get fullName() {
-    //getter
-    return `${this.first} ${this.last}`;
-  }
-
-  set fullName(newName) {
-    const [first, last] = newName.split(' ');
-    this.first = first;
-    this.last = last;
-  }
-
-  getScore() {
-    return this.#score;
-  }
-  updateScore(newScore) {
-    this.#score = newScore;
-  }
-  taunt() {
-    console.log('BOOYAH');
-  }
-  looseLife() {
-    this.numLives -= 1;
-  }
+    print() {
+        console.log(`${this.brand} ${this.color} jacket`);
+    }
 }
-
-class adminPlayer extends Player {
-  constructor(first, last, powers) {
-    super(first, last);
-    this.powers = powers;
-  }
-  isAdmin = true;
+const myJacket = new Jacket("Red", "Mustang");
+myJacket.print();
+class Employee {
+    first;
+    last;
+    constructor(first, last) {
+        this.first = first;
+        this.last = last;
+    }
+    greet() {
+        console.log('Hello!!!');
+    }
 }
-
-// const player1 = new Player('bleu', 'steele');
-// player1.taunt();
-// console.log(player1);
-// player1.looseLife();
-//player1.#score; not acceptable
-// console.log(player1.getScore());
-// player1.updateScore(28);
-// console.log(player1.getScore());
-// console.log(player1);
-//player1.#secret; => not allowed
-//console.log(player1.fullName);
-//console.log(player1.score);
-
-// player1.score = 2345;
-// console.log(player1.score);
-
-// player1.fullName = 'Majic Johnson';
-// console.log(player1);
-
-// const player2 = new Player('charlie', 'brown');
-// player2.taunt();
-
-const admin = new adminPlayer('admin', 'micheal', ['delete', 'restore World']);
-console.log(admin);
+class FullTimeEmployee extends Employee {
+    salary;
+    constructor(first, last, salary) {
+        super(first, last);
+        this.salary = salary;
+    }
+    getpay() {
+        return this.salary;
+    }
+}
+class PartTimeEmployee extends Employee {
+    hourlyrate;
+    hoursWorked;
+    constructor(first, last, hourlyrate, hoursWorked) {
+        super(first, last);
+        this.hourlyrate = hourlyrate;
+        this.hoursWorked = hoursWorked;
+    }
+    getpay() {
+        return this.hourlyrate * this.hoursWorked;
+    }
+}
+const betty = new FullTimeEmployee('Betty', 'Young', 90000);
+console.log(betty.getpay());
+const ernest = new PartTimeEmployee('Ernest', 'Smith', 200, 40);
+console.log(ernest.getpay());
+//in -built Ts generics
+const colors = [];
