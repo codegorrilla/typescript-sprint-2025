@@ -37,20 +37,69 @@ class FullTimeEmployee extends Employee {
     }
 }
 class PartTimeEmployee extends Employee {
-    hourlyrate;
+    hourlyRate;
     hoursWorked;
-    constructor(first, last, hourlyrate, hoursWorked) {
+    constructor(first, last, hourlyRate, hoursWorked) {
         super(first, last);
-        this.hourlyrate = hourlyrate;
+        this.hourlyRate = hourlyRate;
         this.hoursWorked = hoursWorked;
     }
     getpay() {
-        return this.hourlyrate * this.hoursWorked;
+        return this.hourlyRate * this.hoursWorked;
     }
 }
 const betty = new FullTimeEmployee('Betty', 'Young', 90000);
 console.log(betty.getpay());
 const ernest = new PartTimeEmployee('Ernest', 'Smith', 200, 40);
 console.log(ernest.getpay());
-//in -built Ts generics
+//in -built TS generics
 const colors = [];
+const employeeCount = [];
+class department {
+    name;
+    type;
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    }
+}
+class software extends department {
+    bonus;
+    exp;
+    constructor(name, type, bonus, exp) {
+        super(name, type);
+        this.bonus = bonus;
+        this.exp = exp;
+    }
+    payBonuses() {
+        return this.bonus * this.exp;
+    }
+}
+const subhranil = new software('Software', 'IT', 10, 10);
+console.log(subhranil.payBonuses());
+function identity(item) {
+    return item;
+}
+identity(7);
+// identity<Cat>(item: Cat): Cat{
+//     return item;
+// };
+function getRandomElement(list) {
+    const randIdx = Math.floor(Math.random() * list.length);
+    return list[randIdx];
+}
+console.log(getRandomElement(["a", "b", "c"]));
+console.log(getRandomElement([2, 3, 5, 6, 8]));
+function merge(object1, object2) {
+    return {
+        ...object1,
+        ...object2
+    };
+}
+const comboObj = merge({ name: "Colt" }, { pets: ["Blue", "Elton"] });
+console.log(comboObj);
+function printDoubleLength(thing) {
+    return thing.length * 2;
+}
+printDoubleLength("asada");
+//printDoubleLength(123);
