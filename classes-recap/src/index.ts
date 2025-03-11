@@ -203,3 +203,4 @@ function printDoubleLength(thing: lengthy): number {
 
 printDoubleLength("asada");
 //printDoubleLength(123);
+
